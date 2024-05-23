@@ -133,7 +133,7 @@ def start_download():
             summary_text = "没有发现符合条件的‘你已被删’名单。"
 
         # 弹出信息框
-        messagebox.showinfo("完成", f"图片已保存至: {output_file_path}\n\n图片导出成功，同时给你一个小惊喜，这里是程序自动总结的‘你已被删’名单：\n（名单并非完全正确，仅能查找到部分用户）\n\n{summary_text}")
+        messagebox.showinfo("完成", f"图片已保存至: {output_file_path}\n\n给你一个小惊喜，这是程序自动总结的‘你已被删’名单：\n注：名单并非完全正确，仅能查找到部分用户\n\n{summary_text}")
 
 # 创建上传文件按钮
 upload_button = ttk.Button(root, text="上传CSV文件并下载图片", command=start_download)
