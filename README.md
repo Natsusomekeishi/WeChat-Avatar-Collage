@@ -1,6 +1,3 @@
-以下是更新后的 `README.md` 文件内容示例，包含你的项目地址和 GPL-3.0 许可证信息：
-
-```markdown
 # WeChat-Avatar-Collage
 
 WeChat-Avatar-Collage 是一个可以读取从 [MemoTrace](https://github.com/LC044/WeChatMsg/) 导出的 CSV 文件并创建微信头像拼合图的工具。
