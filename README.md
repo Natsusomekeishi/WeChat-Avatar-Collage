@@ -1,14 +1,10 @@
 # WeChat-Avatar-Collage
 
-WeChat-Avatar-Collage 是一个可以读取从 [MemoTrace](https://github.com/LC044/WeChatMsg/) 导出的 CSV 文件并创建微信头像拼合图的工具。
-
-## 描述
-
-该工具可以从 MemoTrace 导出的 CSV 文件中提取微信头像链接，并将所有头像图片拼接成一张 16:9 的图片。同时，还会自动生成一个“你已被删”名单，用于识别被删除的好友。
+WeChat-Avatar-Collage 是一个可以读取从 [MemoTrace](https://github.com/LC044/WeChatMsg/) 导出的联系人 CSV 文件并创建微信头像拼合图的工具。
 
 ## 功能
 
-- 读取从 MemoTrace 导出的 CSV 文件。
+- 读取从 MemoTrace 导出的联系人 CSV 文件。
 - 下载 CSV 文件中包含的微信头像链接。
 - 将下载的头像图片拼接成一张 16:9 的图片。
 - 自动生成“你已被删”名单，并在图片导出后显示。
@@ -30,25 +26,15 @@ git clone https://github.com/Natsusomekeishi/WeChat-Avatar-Collage.git
 cd WeChat-Avatar-Collage
 ```
 
-2. 运行 `main.py` 脚本：
+2. 运行 `WeChat.py` 脚本：
 
 ```bash
-python main.py
+python WeChat.py
 ```
 
-3. 在弹出的窗口中，选择从 MemoTrace 导出的 CSV 文件。
-4. 程序将开始下载头像图片并拼接成一张图片，最后会在指定位置保存生成的图片。
-
-## 示例
-
-运行程序后，选择 CSV 文件并等待下载和拼接完成。成功生成图片后，将弹出一个对话框，提示图片已保存，并显示“你已被删”名单。
-
-## CSV 文件要求
-
-- 第一列：微信用户 ID（包含 `wxid` 字符，不包含 `@chatroom` 字符）。
-- 第三列：好友关系（不为数字 `0`）。
-- 第四列：备注名（可选）。
-- 第八列：头像链接（可选）。
+3. 点击 MemoTrace 程序左上角“数据”，再点击“导出联系人”。
+4. 在弹出的窗口中，选择从 MemoTrace 导出的联系人 CSV 文件。
+5. 程序将开始下载头像图片并拼接成一张图片，最后会在指定位置保存生成的图片。
 
 ## 过滤条件
 
@@ -61,6 +47,7 @@ python main.py
 - 第四列有字。
 - 第一列不包含 `@chatroom` 字符。
 - 第八列没有头像链接。
+- 此名单经测试并不能包含所有相关用户，仅供娱乐。
 
 ## 作者
 
@@ -77,6 +64,3 @@ Keishi
 ## 参考
 
 - [MemoTrace](https://github.com/LC044/WeChatMsg/)
-```
-
-将以上内容保存为 `README.md` 文件，放置在你的 GitHub 项目根目录中。这样可以为用户提供清晰的项目说明和使用指南。
